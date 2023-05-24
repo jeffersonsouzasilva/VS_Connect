@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} /*resetar algumas configuracoes, pois esta com bordas e margem*/
+
+
+
+:root {
+    --azul: #060821;
+    --rosa: #c12d6d;
+    --branco: #ffffff;
+    --azulC: #0c7faf;
+    --azulCard: #182246;
+
+    --font1: 'Righteous', cursive; /* font no google fonts*/
+    --font2: 'Titillium Web', sans-serif;
+} /* nosso bloco de notas, para nao precisar especificar a cor, mas sim o apilido*/ /*adcionado no dia 17*/
+
+
+
+header {
+    /* background-color: #060821; */
+    background-color: var(--azul); /*adcionado no dia 17*/
+}
+
+
+
+.posicionamento_header {
+    width: 1400px;
+    margin: 0 auto; /*para ajustar o posicionamento dos elementos*/
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px; /* altura */
+} 
+
+
+
+/*.posicionamento_header img,  temos esse formato para estilizar um elemento dentro da tag div*/
+/*outro formato e o padrao que estamos usando adicionando class ou seja .nomedaclasse*/
+.posicionamento_header img {
+    width: 250px;
+
+} /*adcionado no dia 17*/
+
+
+
+header nav {
+    width: 450px;
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font1); /*font do menu, do root*/
+    font-size: 18px; /* tamanho da font do menu*/
+
+} /* e tag nativa, so usa uma vez e nao precisa de ponto*/ /*adcionado no dia 17*/
+
+
+
+header a {
+    color: var(--branco); /*branco do root*/
+    text-transform: uppercase; /*torna todos maiusculos*/
+    text-decoration: none; /*tirar o sublinhado */
+
+}/* estilo dos itens do menu */ /*adcionado no dia 17*/
+
+
+
+.btn_login {
+    border: 3px solid  var(--rosa); /*margem de espesura linha continua e cor*/
+    padding: 1px 25px;/* espacamento para altura e largura*/
+    border-radius: 30%;   
+
+} /*botao de login*/ /*adcionado no dia 17*/
+
+
+
+h1 {
+    position: absolute; 
+    left: -999em; /*1em = 16px por padrao, porem se definir o font-size para 20px o em acomplanha*/ /*1em=font-size=16px*/
+    width: 1em;
+    /* overflow: hidden; para sumir com a barra lateral*/
+} /*sumir o titulo da tela, uma posicao fixa com uma cordenada de -999em*/
+
+
+
+.banner {
+    background-image:url(../img/banner-background.png);
+    height: calc(100vh - 80px); /*o banner vai ocupar 100% da pagina, e o plano de fundo da pagina *//*100% -80px por conta do header (posicionamento_header */
+    color: var(--branco);
+    font-family: var(--font2);
+    display: flex;
+    align-items: center;
+} /*texto do banner*/
+
+
+.banner_conteudo{
+    background: linear-gradient(114.61deg, rgba(255, 255, 255, 0.052) 1.08%, rgba(255, 255, 255, 0.117) 99.26%);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 30px 30px 60px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    /* glassCSS esta no class foi do projeto do figma */
+
+    border-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center; /*adicionado no dia 19*/
+    padding: 50px;
+    width: 50%;
+    margin: 0 auto; /*0 de margin vertical e auto centralizado de forma automatica*/
+}
+
+
+.banner_slogan_1 {
+    font-size: 60px;
+    font-family: var(--font1); 
+}
+
+
+.banner_slogan_2 {
+    font-size: 24px;
+    margin: 50px; /*centralisar o texto, largura ocupada*/
+}
+
+
+.banner_slogan_3 {
+    font-size: 22px;
+    text-decoration: underline;
+
+}
+
+.banner_botoes{
+    display: flex;
+    justify-content: space-between;
+    width: 75%; /*75% da capacidade do espacamento totatl */
+    margin-top: 50px; /*adicionado no dia 19*/
+}
+
+.botao {
+    font-family:  var(--font1);
+    color: var(--branco);
+    text-transform: uppercase;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 30%; /*adicionado no dia 19*/
+}
+
+
+.banner_botao_dev {
+    background: rgba(255, 255, 255, 0.01);
+    border: 4px solid var(--rosa);
+    padding: 10px 30px;
+}
+
+
+.banner_botao_cliente {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), linear-gradient(92.23deg, #FF398F -25.96%, #17BBFF 126.83%); /*importado ao inspecionar no figma*/
+    padding: 14px 80px;
+}/*adicionado no dia 19*/
+
+
+.conexao {
+    background-color: var(--azulC);
+    width: 500px ;
+    height: 120px;
+    border: 1px solid var(--branco);
+    font-family: var(--font2);
+    font-size: 22px;
+    color: var(--branco);
+    text-align: center; /*centralizar o texto dentro da tag ou linha*/
+    font-weight: 600;
+    border-radius: 30px;
+    padding: 22px 0; /* 22 na vertical e 0 na horizontal*/
+    position: relative; /* define como cordenada, sendo entre o banner e a regiao branca */
+    top: -60px; /*60px para cima*/
+}/*adicionado no dia 19*/
+
+
+.clientes, .desenvolvedores { /* .desenvolvedores foi adicionado no dia 22, depois de dev_conteudo a*/
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 100px; /*adicionado no dia 22*/
+
+}/*adicionado no dia 19*/
+
+
+.cliente_conteudo img, .dev_conteudo img { /* .dev_conteudo img foi adicionado no dia 22, depois de .dev_conteudo */
+    width: 500px;
+
+} /*adicionado no dia 19*/
+
+
+h2 {
+    font-family: var(--font1);
+    font-size: 30px;
+    text-transform: uppercase;
+    
+}/*adicionado no dia 19*/
+
+
+main li {
+    text-transform: uppercase;
+    font-family: var(--font2);
+    font-size: 22px ;
+    margin: 10px 0;
+
+} /*adicionado no dia 22*/
+
+
+.clientes_botao {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), linear-gradient(92.23deg, #FF398F -25.96%, #17BBFF 126.83%);
+    padding: 11px 50px;
+
+}/*adicionado no dia 22*/
+
+
+.cliente_conteudo ul, .dev_conteudo ul { /* .dev_conteudo ul foi adicionado no dia 22, depois de .dev_conteudo img */
+    margin: 50px 0; /*do meu titulo a ao texto 50px e botao ao texto 50px*/
+    
+}/*adicionado no dia 22*/
+
+
+.cliente_conteudo, .dev_conteudo { /* .dev_conteudo foi adicionado depois de .desenvolvedores*/
+    display: flex;
+    justify-content:  space-around;
+    width: 85%; /*largura que vai ocupar deixando uma margem*/
+
+}/*adicionado no dia 22*/
+
+
+.paralax {
+    background-image: url(../img/maos_connect.png);
+    height: 300px; /*altura*/
+    background-position: center; /*centralizar*/
+    background-size: cover; /*ajustar imagem, alongando ou diminuindo*/
+    background-repeat: no-repeat; /*para nao se repitir como um papel de parede, por conta de talvez ma qualidade*/
+    background-attachment: fixed; /*esses background definem o que e o paralax*/
+
+}/*adicionado no dia 22*/
+
+
+.dev_conteudo a {
+    border: 4px solid var(--rosa);
+    background: linear-gradient(272.99deg, rgba(7, 12, 71, 0.55) 0%, rgba(7, 12, 71, 0.7) 100%); /*importado ao inspecionar no figma*/
+    padding: 7px 46px;
+
+}/*adicionado no dia 22*/
+
+
+.desenvolvedores {  /* .desenvolvedores foi adicionado no dia 22, depois de dev_conteudo a*/
+    padding-top: 100px;
+
+}/*adicionado no dia 22*/
+
+
+.card {
+    width: 400px;
+    height: 350px;
+    color: var(--branco);
+    background-color: var(--azulCard);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    padding: 80px 50px 50px 50px;
+    position: relative;
+
+}/*adicionado no dia 22*/
+
+
+.servicos_cards {
+    display: flex;
+    width: 100%; /*adicionado depois de .servicos*/
+    justify-content: space-evenly; /*adicionado depois de .servicos*/
+
+}/*adicionado no dia 22*/
+
+
+.servicos {
+    padding-bottom:  150px;
+
+}/*adicionado no dia 22*/
+
+
+.card img {
+    position: absolute;
+    top: -30px;
+    width: 120px;
+
+}/*adicionado no dia 22*/
